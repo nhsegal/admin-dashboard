@@ -1,5 +1,6 @@
 :root {
     --main-bg-color: rgb(225,230,230);
+    --sidebar-color: rgb(50,150,220);
   }
 
 body {
@@ -7,6 +8,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 200px auto;
+    margin: 0;
     
 }
 
@@ -15,13 +17,12 @@ header {
     grid-area: 1 / 2 / 3 / 3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2em 5em;
+    grid-template-rows: 3em 5em;
     padding: 5px;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
-
-
 
 header input {
     border-radius: 15px;
@@ -34,9 +35,33 @@ header input {
 header .header-first-row {
     display:flex; 
     flex-direction: row; 
-    justify-content: space-between; 
+    justify-content: flex-start; 
     align-items: center;
-    padding-left: 2em;
+    padding-left: 2rem;
+
+}
+
+header .header-first-row label{
+    padding-right: 5px;
+    flex: 0 0 auto;
+}
+
+header .header-first-row .alert{
+    padding-right: 25px;
+    width: auto;
+    margin-left: auto;
+}
+
+header .header-first-row img{
+    width: auto;
+    margin: none;
+    padding-right: 10px;
+}
+
+header .header-first-row .username{
+    margin-left: 10px;
+    margin-right: 50px;
+    
 }
 
 header .header-second-row {
@@ -46,22 +71,36 @@ header .header-second-row {
     align-items: center;
     padding-left: 2em;
 }
+header .header-second-row .greeting {
+    margin-left: 10px;
+    margin-right: auto;
+}
 
 header .header-second-row ul { 
-    list-style: none;
-
+    list-style: none;  
 }
 
 header .header-second-row ul li { 
     display: inline-block;
+    margin-right: 1rem;
 }
 
-header label {
-    padding-right: 5px;
+header .header-second-row ul li button { 
+    display: inline-block;
+    background: var(--sidebar-color);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    height: 2.5rem;
+    width: 6rem;
+    font-size: 1rem;
 }
+
+
+
 
 .sidebar {
-    background: rgb(100,180,240);
+    background: var(--sidebar-color);
     color: white;
     grid-area: 1 / 1 / 3 / 2;
 }
