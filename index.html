@@ -7,27 +7,42 @@
     , initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="#" alt="search"> 
-        <input type="text">
-        <img src="#" alt="alarm"> 
-        <img src="#" alt="userimg"> 
-        Morgan Oakley
         
-        <img src="#" alt="userimg"> 
-        Hi there, 
-        <h3>
-            Morgan Oakley (@morgan)
-        </h3>
-
-        <ul>
-            <li><button>New</button></li>
-            <li><button>Upload</button></li>
-            <li><button>Share</button></li>
-        </ul>
+        <div class="header-first-row">
+            <div></div>
+            <label for="search" class="material-symbols-outlined">search</label>
+            <input type="text" id="search">
+            <span class="material-symbols-outlined">
+                notifications_active
+            </span>
+            <img src="imgs/user-avatar.png" style="height: 3em; width: auto;" alt="user avatar"> 
+            <span>Morgan Oakley</span>
+        </div>
+        
+        <div class="header-second-row">
+   
+            <img src="imgs/user-avatar.png" style="height: 5em; width: auto;" alt="user avatar"> 
+            Hi there, 
+            <h3>
+                Morgan Oakley (@morgan)
+            </h3>
+    
+            <ul>
+                <li><button>New</button></li>
+                <li><button>Upload</button></li>
+                <li><button>Share</button></li>
+            </ul>
+        </div>
+      
+       
+        
+     
 
 
     </header>
@@ -124,7 +139,7 @@
         </div>
         <div class="trending">
             <h3>Trending</h3>
-            
+
             <ul>
                 <li>stupiduser1</li>
                 <li>stupiduser2</li>

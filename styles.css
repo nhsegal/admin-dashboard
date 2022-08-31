@@ -1,13 +1,63 @@
+:root {
+    --main-bg-color: rgb(225,230,230);
+  }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 15vh auto;
+    grid-template-rows: 200px auto;
+    
 }
 
 header {
     background: white;
     grid-area: 1 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em 5em;
+    padding: 5px;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+header input {
+    border-radius: 15px;
+    background: var(--main-bg-color);
+    border: none;
+    width: 50%;
+    height: 1.8em;
+}
+
+header .header-first-row {
+    display:flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    padding-left: 2em;
+}
+
+header .header-second-row {
+    display:flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center;
+    padding-left: 2em;
+}
+
+header .header-second-row ul { 
+    list-style: none;
+
+}
+
+header .header-second-row ul li { 
+    display: inline-block;
+}
+
+header label {
+    padding-right: 5px;
 }
 
 .sidebar {
@@ -17,7 +67,7 @@ header {
 }
 
 main {
-    background: rgb(225,230,230);
+    background: var(--main-bg-color);
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     grid-template-columns: 75% 25%;
