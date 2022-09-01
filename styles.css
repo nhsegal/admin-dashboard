@@ -60,7 +60,7 @@ header .header-first-row .alert{
 
 header .header-first-row img{
     width: auto;
-    margin: none;
+    margin: 0;
     padding-right: 10px;
 }
 
@@ -211,8 +211,9 @@ main p{
     margin-right: 1rem;
 }
 
-.announcement-content :nth-child(4), .announcement-content :nth-child(7) {
-    border-bottom: 1px solid rgb(190,190,190);    
+.announcement-content :nth-child(2), .announcement-content :nth-child(3) {
+    border-top: 1px solid rgb(190,190,190);  
+    padding-top: 1rem; 
 }
 
 .trending li {
@@ -238,7 +239,7 @@ main p{
    color: rgb(100,100,100);
 }
 
-#icon-container {
+.icon-container {
     justify-self: flex-end;
     display: flex;
     justify-content: flex-end;
