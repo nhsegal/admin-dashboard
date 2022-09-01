@@ -1,6 +1,8 @@
 :root {
     --main-bg-color: rgb(225,230,230);
     --sidebar-color: rgb(50,150,220);
+    
+        
   }
 
 body {
@@ -9,8 +11,13 @@ body {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 180px auto;
     margin: 0;
+
+    padding:0;
+    
     
 }
+
+
 
 header {
     background: white;
@@ -151,13 +158,12 @@ main {
     background: var(--main-bg-color);
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: 1fr 1fr;
 }
 
 .projects {
     margin-left: 20px;
-    margin-top: 30px;
     grid-area: 1 / 1 / 3 / 2;
 }
 
@@ -169,6 +175,7 @@ main {
     gap: 20px 35px;
 
 }
+
 .project-card {
     background: white;
     height: auto;
@@ -179,6 +186,30 @@ main {
     color: rgb(130,130,130);
 }
 
+main h4{
+    margin-bottom: 0px;
+  }
+  
+main p{
+    margin-top: 0px;
+  }
+
 .project-card h4 {
     color: black;
+}
+
+.announcements {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.announcement-content {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+
+}
+
+.announcement-content :nth-child(4), .announcement-content :nth-child(7) {
+    border-bottom: 1px solid rgb(190,190,190);    
 }
