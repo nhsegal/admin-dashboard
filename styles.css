@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: rgb(225,230,230);
     --sidebar-color: rgb(50,150,220);
+    --light-text: rgb(130,130,130);
     
         
   }
@@ -36,6 +37,13 @@ header input {
     border: none;
     width: 50%;
     height: 1.8em;
+}
+
+header .material-symbols-outlined{
+    transition: .2s;
+}
+header .material-symbols-outlined:hover{
+    transform: scale(1.2);
 }
 
 header .header-first-row {
@@ -97,8 +105,12 @@ header .header-second-row ul li button {
     width: 6rem;
     font-size: 1rem;
     margin-top: 2.5rem;
+    transition: 0.2s;
 }
 
+header .header-second-row ul li button:hover { 
+    scale: 1.1;
+}
 
 .sidebar {
     background: var(--sidebar-color);
@@ -129,7 +141,6 @@ header .header-second-row ul li button {
 .sidebar .dashboard-header img{
     padding-right: .5rem;
     height: 3rem;
-
 }
 
 
@@ -139,6 +150,7 @@ header .header-second-row ul li button {
     justify-content: flex-start;
     gap: 20px;
     margin-bottom: 20px;
+ 
   }
 
 .sidebar a, .sidebar a:visited,.sidebar a:active {
@@ -146,13 +158,27 @@ header .header-second-row ul li button {
     text-decoration: none;
   }
 
+  /*
+  .sidebar a:hover {
+    font-size: 1.2rem;
+    transition: .2s;
+  }
+  */
+  .sidebar li{ 
+    transition:.2s; /* this is grow duration */
+  }
+  
+  .sidebar li:hover {
+  transform-origin: 30% center;
+  transform:scale(1.2); /* this is grow amount */
+  gap: 20px;
+  }
+
 main {
     background: var(--main-bg-color);
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     gap: 30px;
-    /*grid-template-columns: 65% min(35%, 200px);
-    grid-template-rows: 1fr 1fr;*/
 }
 
 .projects {
@@ -177,7 +203,7 @@ main {
     border-radius: 8px;
     border-left: 8px solid rgb(250,200,0);
     padding: 1em 1em;
-    color: rgb(130,130,130);
+    color: var(--light-text);
     display: flex;
     flex-direction: column;
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
@@ -212,6 +238,11 @@ main p{
     padding: 1rem 1rem;
     margin-right: 1rem;
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--light-text);
+}
+
+.announcement-content h4{
+    color: black;
 }
 
 .announcement-content :nth-child(2), .announcement-content :nth-child(3) {
@@ -252,6 +283,15 @@ main p{
     margin-bottom: 0;
     margin-top: auto;
 }
+
+.icon-container img{
+    transition: 0.2s;
+ }
+
+.icon-container img:hover{
+   transform: scale(1.3);
+}
+
 #credit {
     font-size: small;
     margin-top: 1rem;
