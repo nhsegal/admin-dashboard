@@ -82,8 +82,6 @@ header .header-second-row .greeting {
     margin-right: auto;
 }
 
-
-
 header .header-second-row ul li { 
     display: inline-block;
     margin-right: 2rem;
@@ -151,12 +149,14 @@ header .header-second-row ul li button {
 main {
     background: var(--main-bg-color);
     grid-area: 2 / 2 / 3 / 3;
-    display: grid;
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    gap: 30px;
+    /*grid-template-columns: 65% min(35%, 200px);
+    grid-template-rows: 1fr 1fr;*/
 }
 
 .projects {
+    flex 1;
     margin-left: 20px;
     grid-area: 1 / 1 / 3 / 2;
 }
